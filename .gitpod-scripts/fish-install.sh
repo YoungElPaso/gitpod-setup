@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Symlink Fish shared directory (history etc) to ~/workspace so it can persist across workspace reload. (/workspace is persisted by Gitpod!)
 # Create workspace .fish dir, history persists here.
 mkdir -p /workspace/.fish/

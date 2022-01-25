@@ -3,8 +3,4 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: > 
-      # Sets up fish w/ persistent history in workspace.
-      sh ./.gitpod-scripts/fish-install.sh
-      # Regular npm install.
-      npm install
+  - init: sh ./.gitpod-scripts/fish-install.sh
