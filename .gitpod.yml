@@ -3,4 +3,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: sh ./.gitpod-scripts/fish-install.sh
+  - init: >
+      mkdir -p /workspace/.fish
+      mkdir -p ~/.local/share/
+  - command: ln -s /workspace/.fish ~/.local/share/fish
