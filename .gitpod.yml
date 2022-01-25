@@ -6,5 +6,4 @@ tasks:
   - name: Setup
     init: >
       mkdir -p /workspace/.fish
-      mkdir -p ~/.local/share/
-    command: ln -s /workspace/.fish ~/.local/share/fish
+    command: mkdir -p ~/.local/share && ln -s /workspace/.fish ~/.local/share/fish
