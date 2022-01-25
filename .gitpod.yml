@@ -1,9 +1,12 @@
-# Customizing Docker image to install some niceties like starship prompt and fish config.
+# Customizing Docker image to install some niceties like starship prompt and fish shell config.
 image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Setup
+  # Sets up Fish shell, creating a persistent history in this workspace.
+  # Symlinks persistent fish history etc to default fish history location.
+  # Allows fish history to persist across workspace stop/start.
+  - name: Setup workspace
     init: >
       mkdir -p /workspace/.fish
     command: mkdir -p ~/.local/share && ln -s /workspace/.fish ~/.local/share/fish
